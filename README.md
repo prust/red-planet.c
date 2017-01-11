@@ -37,7 +37,7 @@ local rp = require('rp')
 local sheet = rp.loadSheet('assets/princess.png', 64)
 
 local player = {
-  id = 'player1'
+  id = 'player1',
   sprite = sheet:sprite(1, 1), -- base sprite is top-left corner (x=1, y=1)
   animation = {
     up = sheet:anim('2-9', 1), -- up walking animation is (x=2-9, y=1)
