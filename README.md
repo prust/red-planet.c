@@ -32,20 +32,24 @@ Copy the `rp` folder into your project's folder. To-Do: Upload to LuaRocks.
 
 ```lua
 local rp = require('rp')
+
+-- define spritesheet as a grid of 64x64 tiles
 local sheet = rp.loadSheet('assets/princess.png', 64)
+
 local player = {
-  sprite = sheet:sprite(1, 1),
+  id = 'player1'
+  sprite = sheet:sprite(1, 1), -- base sprite is top-left corner (x=1, y=1)
   animation = {
-    up = sheet:anim('2-9', 1),
+    up = sheet:anim('2-9', 1), -- up walking animation is (x=2-9, y=1)
     left = sheet:anim('2-9', 2),
     down = sheet:anim('2-9', 3),
     right = sheet:anim('2-9', 4)
-  },
-  player1 = true
+  }
 }
 
 local world = rp.world(
-  rp.topDownControl('wasd', 'player1')
+  -- create each of the systems for the game
+  rp.topDownControl('wasd', {id = 'player1'})
   rp.spriteRender()
 )
 world:add(player)
