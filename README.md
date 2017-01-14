@@ -7,7 +7,7 @@ Red Planet is an easy yet powerful framework for making 2D games in Lua and LÖV
 * [gamera](https://github.com/kikito/gamera) for a Camera System
 * [sti](https://github.com/karai17/Simple-Tiled-Implementation/) for Tiled Map Loading and Rendering
 
-On top of these, Red Planet provides a layer of common code -- code that game devs typically copy from project to project, for instance:
+On top of these, Red Planet provides a layer of common code that game devs typically copy from project to project:
 
 * Registering Map Objects & Tiles with the Collision System
 * Tracking the Player with the Camera
@@ -57,9 +57,7 @@ world:add(player)
 
 ## Scope
 
-For the purpose of limiting scope, the Red Planet core (in the `rp` folder) only targets functionality needed across most of the following genres: Platformers, Shooters, Action RPGs, Roguelikes, Sandbox RPGs, Real Time Strategy and Tower Defense.
-
-Functionality that does not meet this criteria (unique to a specific game or to niche genres) should be contributed to the `rp-plugins` folder.
+The core Red Planet library is focused on functionality that is useful across many popular genres (Platformers, Shooters, Action RPGs, Roguelikes, Sandbox RPGs, Real Time Strategy, Tower Defense, etc). Functionality that is unique to a specific game or to a niche genre will be placed in a plugins folder.
 
 ## License
 
