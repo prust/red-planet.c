@@ -49,11 +49,48 @@ local player = {
 
 local world = rp.world(
   -- create each of the systems for the game
-  rp.topDownControl('wasd', {id = 'player1'})
+  rp.topDownControl('wasd', {id = 'player1'}),
   rp.spriteRender()
 )
 world:add(player)
 ```
+
+## Loading a Tilemap and Handling Collisions
+
+```lua
+-- implicitly creates a bump collision world
+local map = rp.loadMap('assets/lpc-map.lua')
+
+-- the bump physics system moves everything w/ velocity
+-- everything w/ position & width/height and collides=true are added to collision world (via separate system) -- solid=true marks items as "slide"
+-- add objects from the STI map to the ECS world (& handle class instantiations, etc); by default properties are lowercased & object names are set as id
+map.addObjects() -- these optionally take a func that allow you to filter & map the objects from Tiled, instantiate objects, etc
+map.addTilesWithProperties()
+
+-- objects are moved (by the bump physics system) in the order in which they were added
+-- when an object is moved, ALL collision handlers between the two different types of objects are triggered, in the order they are defined
+-- if a handler returns false, we are done handling
+-- I'm uncomfortable between the physics_reaction and [game]_reaction separation, it seems arbitrary
+-- Collision event handler arguments:
+-- * `ltr_physics_reaction, rtl_physics_reaction[, reaction]`
+-- * `ltr_physics_reaction, rtl_physics_reaction, ltr_reaction, rtl_reaction`
+
+rp.on('collide', {
+  '#myplayer bullet' = {'touch', onPlayerBullet},
+  'player bullet' = {'kickback', 'touch', onPlayerBullet}
+})
+```
+
+Entity selector strings:
+* rp.primaryAttribute is used to define what the plain strings (no preifx) map to (defaults to 'type')
+* rp.idAttribute can be used to define what # maps to in these strings (defaults to 'id')
+* "." works for any property
+
+You have to pass null if you want ltr_reaction but not rtl_reaction.
+
+## API Documentation
+
+TODO: document the helper functions as well as each system and the component properties it depends on.
 
 ## Scope
 
