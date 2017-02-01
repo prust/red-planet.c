@@ -24,6 +24,10 @@ This common code is designed to have sensible defaults, but to also be configura
 
 To promote interoperability, Red Planet uses an Entity Component System ([tiny-ecs](https://github.com/bakpakin/tiny-ecs)) with conventions for commonly-used properties (for instance, `pos.x` & `pos.y` for position, and `vel.x` & `vel.y` for velocity).
 
+## WARNING: The implementation is incomplete
+
+This README represents how I would *like* the API to work. There is a fair bit of refactoring to do and some functions that need to be created in order for it to work like this. None of the below code works as-written... yet.
+
 ## Getting Started
 
 Copy the `rp` folder into your project's folder. To-Do: Upload to LuaRocks. 
