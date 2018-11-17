@@ -4,7 +4,7 @@ Red Planet is intended to be a small batteries-included 2D game engine that allo
 
 Types of Entities:
 
-* Player
+* Player(s)
 * Enemies
 * Bullets
 * Weapons
