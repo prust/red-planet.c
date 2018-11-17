@@ -1,6 +1,6 @@
 # Red Planet Game Engine
 
-Red Planet is intended to be an easy, batteries-included 2D game engine that provides the basics needed for most 2D games:
+Red Planet is intended to be an easy, batteries-included 2D game engine that allows you to get started quickly and to focus your time on what makes your game unique instead of spending it writing boilerplate code.
 
 Types of Entities:
 
@@ -11,12 +11,12 @@ Types of Entities:
 
 Functionality:
 
-* Viewport that follows the player
+* Viewport that follows the player(s)
 * Collisions
 * Damage & Health
 * Animation
 * Tileset Importing
-* Basic controller support for player movement
+* Controller support
 
 Basic Game Functionality:
 
@@ -39,7 +39,7 @@ If you need to do deeper customizations, you can do so in C (but you will need t
 
 ## Scope
 
-The core Red Planet library is focused on functionality that is useful across most 2D action genres (Platformers, Shooters, Action RPGs, Roguelikes, Real Time Strategy, etc). Functionality that is not commonly used across most genres should be relegated to a module.
+The Red Planet core is focused on functionality that is useful across most 2D action genres (Platformers, Shooters, Action RPGs, Roguelikes, Real Time Strategy, etc). Functionality that is not commonly used across most of these genres should be relegated to a module.
 
 ## License
 
