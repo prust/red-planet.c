@@ -1,32 +1,33 @@
 # Red Planet Game Engine
 
-Red Planet is intended to be an easy, batteries-included 2D game engine that allows you to get started quickly and to focus your time on what makes your game unique instead of spending it writing boilerplate code.
+Red Planet is intended to be a small batteries-included 2D game engine that allows you to get started quickly and to focus on what makes your game unique instead of writing boilerplate code.
 
 Types of Entities:
 
 * Player
 * Enemies
+* Bullets
 * Weapons
 * Collectables
 
 Functionality:
 
-* Viewport that follows the player(s)
-* Collisions
-* Damage & Health
-* Animation
-* Tileset Importing
-* Controller support
+- [ ] Viewport that follows the player(s)
+- [ ] Collisions
+- [ ] Damage & Health
+- [ ] Animation
+- [ ] Tileset Importing (from [Tiled](https://www.mapeditor.org))
+- [ ] Controller support
 
 Basic Game Functionality:
 
-* Start Screen, Level Intro/End Screens
-* Pause Screen
-* 2-Player Selection
+- [ ] Start Screen
+- [ ] Level Intro Screens
+- [ ] Level End Screens
+- [ ] Pause Screen
+- [ ] 2-Player Selection
 
-If you just need to tweak parameters, set spritesheets, etc, you can do basic configuration with a JSON file.
-
-If you need to do deeper customizations, you can do so in C (but you will need to recompile). In later versions, we hope to add bindings to dynamic languages (probably Javascript, Lua and Python), so you can write custom game logic in a high-level language of your choosing.
+Basic customizations can be done in a JSON file, but custom logic and extensions need to be done in C (in later versions we hope to add bindings to Javascript, Lua and/or Python).
 
 ## Getting Started
 
