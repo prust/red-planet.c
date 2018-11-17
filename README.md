@@ -19,13 +19,13 @@ Functionality:
 - [ ] Tileset Importing (from [Tiled](https://www.mapeditor.org))
 - [ ] Controller support
 
-Basic Game Functionality:
+Screens:
 
 - [ ] Start Screen
+- [ ] with 2-Player Selection
 - [ ] Level Intro Screens
 - [ ] Level End Screens
 - [ ] Pause Screen
-- [ ] 2-Player Selection
 
 Basic customizations can be done in a JSON file, but custom logic and extensions need to be done in C (in later versions we hope to add bindings to Javascript, Lua and/or Python).
 
