@@ -1,6 +1,6 @@
 # Red Planet Game Engine
 
-Red Planet is intended to be a small batteries-included 2D game engine that allows you to get started quickly and to focus on what makes your game unique instead of writing boilerplate code.
+Red Planet is intended to be a small, batteries-included 2D game engine that allows you to get started quickly and to focus on what makes your game unique instead of on writing boilerplate code.
 
 Types of Entities:
 
