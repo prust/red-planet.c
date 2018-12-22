@@ -115,9 +115,9 @@ int main(int num_args, char* args[]) {
   if (SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND) < 0)
     error("setting blend mode");
 
-  Image title_img = load_img(renderer, "images/title.png");
+  Image title_img = load_img(renderer, "example/title.png");
   title_img.y = 50;
-   
+  
   if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
     error("opening audio device");
 
@@ -145,7 +145,7 @@ int main(int num_args, char* args[]) {
     }
 
     // set BG color
-    if (SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255) < 0)
+    if (SDL_SetRenderDrawColor(renderer, 77, 49, 49, 255) < 0)
       error("setting bg color");
     if (SDL_RenderClear(renderer) < 0)
       error("clearing renderer");
