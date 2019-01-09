@@ -188,7 +188,7 @@ void play_level(SDL_Window* window, SDL_Renderer* renderer) {
 
   load(players, enemies, bullets, collectables, weapons);
 
-  SDL_Texture* sprites = IMG_LoadTexture(renderer, "images/spritesheet.png");
+  SDL_Texture* sprites = IMG_LoadTexture(renderer, "example/spritesheet.png");
   if (!sprites)
     error("loading image");
 
@@ -425,7 +425,7 @@ void update(double dt, unsigned int last_loop_time, unsigned int curr_time, Enti
 
 void render(SDL_Renderer* renderer, SDL_Texture* sprites, Entity players[], Entity enemies[], Entity bullets[], Entity collectables[], Entity weapons[], unsigned int start_time) {
   // set BG color
-  if (SDL_SetRenderDrawColor(renderer, 38, 67, 44, 255) < 0)
+  if (SDL_SetRenderDrawColor(renderer, 77, 49, 49, 255) < 0)
     error("setting bg color");
   if (SDL_RenderClear(renderer) < 0)
     error("clearing renderer");
